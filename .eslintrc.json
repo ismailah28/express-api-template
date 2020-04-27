@@ -5,7 +5,7 @@
     "node": true,
     "mocha": true
   },
-  "extends": ["prettier", "airbnb-base"],
+  "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
   "globals": {
     "Atomics": "readonly",
@@ -25,7 +25,7 @@
     "comma-dangle": [0],
     "arrow-parens": [0],
     "object-curly-spacing": ["warn", "always"],
-    "array-bracket-spacing": ["warn", "always"],
+    // "array-bracket-spacing": ["warn", "always"],
     "import/prefer-default-export": [0]
   }
 }
