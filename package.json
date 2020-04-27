@@ -8,7 +8,8 @@
     "startdev": "nodemon --exec babel-node ./src/bin/www",
     "lint": "./node_modules/.bin/eslint ./src",
     "pretty": "prettier --write \"**/*.{js,json}\" \"!node_modules/**\"",
-    "postpretty": "yarn lint --fix"
+    "postpretty": "yarn lint --fix",
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,12 +27,18 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/register": "^7.9.0",
     "@babel/runtime": "^7.9.2",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.3",
+    "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
-    "prettier": "^2.0.5"
+    "nyc": "^15.0.1",
+    "prettier": "^2.0.5",
+    "sinon-chai": "^3.5.0",
+    "supertest": "^4.0.2"
   }
 }
